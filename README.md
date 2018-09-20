@@ -63,6 +63,22 @@ https://github.com/anthonygrees/policyfile_pipeline
 https://github.com/anthonygrees/image_pipeline
 
 
+## Existing Brownfields Recovery Pipeline
+
+### Description
+
+### Depends On (Up stream)
+- Policyfile Pipeline (Mandatory)
+
+### Depends On It (Down stream)
+- All Pipelines for Existing OS's and Middleware (Mandatory)
+
+![Brownfields Pipeline](/images/brownfields_pipeline.png)
+
+### Code
+https://github.com/anthonygrees/existing_brownfields_pipeline
+
+
 ## License and Author
 
 * Author:: Matt Ray <matt@chef.io>
