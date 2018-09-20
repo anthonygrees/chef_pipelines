@@ -6,7 +6,7 @@ Chef manages changes to both infrastructure and application code, giving your op
 Chef accelerates the adoption of continuous delivery and encourages DevOps collaboration. It provides a proven, reproducible workflow for managing changes as they flow through the pipeline from a local workstation, through automated tests, and out into production.
 
 ### About
-All pipelines are written in `groovy` and stored in a `Jenkinsfile` which can be displayed in Jenkins with the Blue Ocean plugin.
+For illistration purposes, all pipelines are written in `groovy` and stored in a `Jenkinsfile` which can be displayed in Jenkins with the Blue Ocean plugin.  As Chef is an open API, you can choose to use your favorite CI/CD pipeline like Azure DevOps, VSTS, Bamboo or Jenkins.
 
 ### Pipelines
 A pipeline is series of automated and manual quality gates that take software changes from development to delivery. The goal of a pipeline is to move changes from your workstation into production quickly and safely.
