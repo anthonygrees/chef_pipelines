@@ -1,9 +1,13 @@
 # Chef Pipelines
 
-## Description
+### Description
 All pipelines are written in `groovy` and stored in a `Jenkinsfile` which can be displayed in Jenkins with the Blue Ocean plugin.
 
+---
 ## InSpec Pipeline
+InSpec is a framework for testing and auditing your applications and infrastructure. InSpec works by comparing the actual state of your system with the desired state that you express in easy-to-read and easy-to-write InSpec code. InSpec detects violations and displays findings in the form of a report, but puts you in control of remediation.
+
+The InSpec pipeline takes the profiles and controls written, performs lint and syntax checks and produces a signed artifact that is consumed by the Policyfile pipeline.
 
 ### Description
 This pipeline takes an InSpec profile and performs syntax and lint checking to produce an archive that can be used by an Audit Cookbook to validate images, OS's and Middleware.
@@ -19,7 +23,16 @@ This pipeline takes an InSpec profile and performs syntax and lint checking to p
 ### Code
 https://github.com/anthonygrees/inspec_pipeline
 
+---
 ## Cookbook Pipeline
+A cookbook is the fundamental unit of configuration and policy distribution. A cookbook defines a scenario and contains everything that is required to support that scenario:
+- Recipes that specify the resources to use and the order in which they are to be applied
+- Attribute values
+- File distributions
+- Templates
+- Extensions to Chef, such as custom resources and libraries
+
+The cookbook pipeline takes the cookbook and it's recipies, tests them using kitchen, performs lint and syntax checks and then publishes it for the policyfile pipeline to consume.
 
 ### Description
 
@@ -34,9 +47,13 @@ https://github.com/anthonygrees/inspec_pipeline
 ### Code
 https://github.com/anthonygrees/cookbook_pipeline
 
+---
 ## Policyfile Pipeline
 
 ### Description
+A Policyfile is an optional way to manage role, environment, and community cookbook data with a single document that is uploaded to the Chef server. The file is associated with a group of nodes, cookbooks, and settings. When these nodes perform a Chef client run, they utilize recipes specified in the Policyfile run-list.
+
+The policyfile pipeline takes input from both `cookbooks` and `inspec` and then resolves dependencies.  The versions, attributes and runlist are all handeled by the policyfile.
 
 ### Depends On (Up stream)
 - InSpec Pipeline (Mandatory)
@@ -51,6 +68,7 @@ https://github.com/anthonygrees/cookbook_pipeline
 ### Code
 https://github.com/anthonygrees/policyfile_pipeline
 
+---
 ## Image Pipeline
 
 ### Description
@@ -66,7 +84,7 @@ https://github.com/anthonygrees/policyfile_pipeline
 ### Code
 https://github.com/anthonygrees/image_pipeline
 
-
+---
 ## Existing Brownfields Recovery Pipeline
 
 ### Description
@@ -82,7 +100,7 @@ https://github.com/anthonygrees/image_pipeline
 ### Code
 https://github.com/anthonygrees/existing_brownfields_pipeline
 
-
+---
 ## License and Author
 
 * Author:: Matt Ray <matt@chef.io>
