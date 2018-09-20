@@ -1,8 +1,12 @@
 # Chef Pipelines
 
+## Description
+All pipelines are written in `groovy` and stored in a `Jenkinsfile` which can be displayed in Jenkins with the Blue Ocean plugin.
+
 ## InSpec Pipeline
 
 ### Description
+This pipeline takes an InSpec profile and performs syntax and lint checking to produce an archive that can be used by an Audit Cookbook to validate images, OS's and Middleware.
 
 ### Depends On (Up stream)
 - Other InSpec Pipelines (Optional)
