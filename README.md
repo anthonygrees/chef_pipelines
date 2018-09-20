@@ -1,7 +1,21 @@
 # Chef Pipelines
 
 ### Description
+Chef manages changes to both infrastructure and application code, giving your operations and development teams a common platform for developing, testing, and deploying cookbooks, applications, and more.
+
+Chef accelerates the adoption of continuous delivery and encourages DevOps collaboration. It provides a proven, reproducible workflow for managing changes as they flow through the pipeline from a local workstation, through automated tests, and out into production.
+
+### About
 All pipelines are written in `groovy` and stored in a `Jenkinsfile` which can be displayed in Jenkins with the Blue Ocean plugin.
+
+### Pipelines
+A pipeline is series of automated and manual quality gates that take software changes from development to delivery. The goal of a pipeline is to move changes from your workstation into production quickly and safely.
+
+Pipelines in Chef have six stages: Verify, Build, Acceptance, Union, Rehearsal, and Delivered. Changes progress from one stage to another by passing a suite of automated tests. For the Verify and Acceptance stages, explicit approval by a designated person is required (in addition to the tests).
+
+The following illustration is an example of the phases of each pipeline stage.
+
+![Pipeline](/images/pipeline.png)
 
 ---
 ## InSpec Pipeline
