@@ -17,6 +17,13 @@ The following illustration is an example of the phases of each pipeline stage.
 
 ![Pipeline](/images/pipeline.png)
 
+### How the pipelines interact
+The pipelines have dependencies on each other, creating reusable artifacts that feed the next.  As a whole, the pipelines interact as follows and can take ```use cases``` as an input.  Some examples of these are 
+ - Patching
+ - Image Building
+ - Database as a Service
+
+![All Pipelines](/images/all_pipelines.png)
 ---
 ## InSpec Pipeline
 InSpec is a framework for testing and auditing your applications and infrastructure. InSpec works by comparing the actual state of your system with the desired state that you express in easy-to-read and easy-to-write InSpec code. InSpec detects violations and displays findings in the form of a report, but puts you in control of remediation.
