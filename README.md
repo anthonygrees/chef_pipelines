@@ -18,10 +18,11 @@ The following illustration is an example of the phases of each pipeline stage.
 ![Pipeline](/images/pipeline.png)
 
 ### How the pipelines interact
-The pipelines have dependencies on each other, creating reusable artifacts that feed the next.  As a whole, the pipelines interact as follows and can take ```use cases``` as an input.  Some examples of these are 
+The pipelines have dependencies on each other, creating reusable artifacts that feed the next.  As a whole, the pipelines interact as follows and can take ```use cases``` as an input.  Some examples of these use cases are: 
  - Patching
  - Image Building
  - Database as a Service
+ - OS Hardening
 
 ![All Pipelines](/images/all_pipelines.png)
 ---
